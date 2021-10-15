@@ -1,0 +1,7 @@
+mixin radiowords(name, ...items)
+  ul.radiowords
+    for item in items 
+      li 
+        label
+          input(class="radiowords__input", type="radio", name=name)
+          .radiowords__label= item

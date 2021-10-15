@@ -1,0 +1,20 @@
+%center-column
+  display: flex
+  flex-direction: column
+  justify-content: center
+  align-items: center
+  text-align: center
+
+%selected
+  font-weight: 500
+  background: $main
+  color: #fff
+  box-shadow: none
+  transition: 0.2s background, 0.2s color, 0.2s box-shadow
+
+%deselected
+  font-weight: 300
+  background: #fff
+  color: #000
+  box-shadow: $shadow-left, $shadow-right
+  transition: 0.2s background, 0.2s color, 0.2s box-shadow

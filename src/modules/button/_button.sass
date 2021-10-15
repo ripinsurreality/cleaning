@@ -1,0 +1,61 @@
+.button
+  &-form
+    @extend %center-column
+    border-radius: 15px
+    background: $main
+    color: #fff
+    padding: 7px 0
+    width: 192px
+  &-plus
+    @extend %center-column
+    border-radius: 6px
+    width: 60px
+    height: 30px
+    color: #fff
+    background: $main
+    &::after
+      content: "\002B"
+      font-size: 36px
+      font-weight: bold
+
+  &-black
+    @extend %center-column
+    border-radius: 8px
+    width: 230px
+    padding: 7px 0
+    background: #000
+    color: #fff
+
+  &-add
+    @extend %center-column
+    flex-direction: row
+    border-radius: 30px
+    background: #fff
+    box-shadow: 1px 1px 5px 0px #00000026
+    color: #000
+    padding: 0px 0
+    width: 240px
+    height: 30px
+    &::before
+      content: "\002b"
+      font-size: 18px
+      font-weight: bold
+      background: #000
+      color: #fff
+      border-radius: 50%
+      @extend %center-column
+      width: 19px
+      height: 19px
+      margin-right: 10px
+
+  &-pay
+    @extend %center-column
+    border-radius: 30px
+    background: #1F1F1F
+    color: #fff
+    width: 240px
+    padding: 7px 0
+    font-size: 16px
+
+    &:disabled
+      opacity: 0.25

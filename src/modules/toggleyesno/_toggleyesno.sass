@@ -1,0 +1,32 @@
+.toggleyesno
+  appearance: none
+  outline: none
+  flex: none
+  display: flex
+  justify-content: center
+  align-items: center
+  cursor: pointer
+
+  &::before,
+  &::after
+    @extend %center-column
+    width: 45px
+    height: 25px
+    border-radius: 12px
+    
+  &::before
+    content: "Да"
+    @extend %selected
+
+  &::after
+    content: "Нет"
+    margin-left: 10px
+    @extend %deselected
+  
+  &:checked
+    &::before
+      @extend %deselected
+    
+    &::after
+      @extend %selected 
+

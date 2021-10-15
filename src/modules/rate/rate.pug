@@ -1,0 +1,7 @@
+mixin rate(name)
+  - var n = 1
+  ul
+    while n <= 5
+      li 
+        label
+          input(type="radio", name=name, value=n++)

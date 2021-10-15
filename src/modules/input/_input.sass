@@ -1,0 +1,37 @@
+.input
+  width: 193px
+  height: 25px
+  position: relative
+  font-size: 14px
+  font-weight: 300
+
+  &__input
+    border: 1px solid #DFDFDF
+    border-radius: 15px
+    padding: 5px 9px
+    outline: none
+
+  &--large
+    width: 193px
+    height: 35px
+
+    & .input__input
+      padding: 10px 20px
+
+  &--square
+    font-size: 13px
+    width: 230px
+    height: 30px
+
+    & .input__input
+      padding: 9px 13px
+      border-radius: 8px
+
+  &--shade
+    width: 240px
+    height: 30px
+
+    & .input__input
+      padding: 8px 15px
+      border-radius: 20px
+      box-shadow: $shadow-inset-light

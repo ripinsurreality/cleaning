@@ -1,0 +1,8 @@
+mixin radionum(number, name)
+  - var n = 1;
+    ul.radionum
+      while n <= number
+        li
+          label
+            input(class="radionum__input" type="radio", name=name, value=n)
+            .radionum__label=n++

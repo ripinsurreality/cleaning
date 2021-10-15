@@ -1,0 +1,29 @@
+doctype html
+html(lang="en")
+  head
+    meta(charset="UTF-8")
+    meta(http-equiv="X-UA-Compatible" content="IE=edge")
+    meta(name="viewport" content="width=device-width, initial-scale=1.0")
+    title Greeting
+    include /modules/button/button
+  body 
+    .container
+      .head
+        .location
+          include /assets/img/loc.svg 
+          span Москва
+        .logo
+          include /assets/img/logo.svg
+      .tagline 
+        include /assets/img/tagline.svg
+      .reg-buttons 
+        .reg-buttons__button
+          +button("form", "Физическое лицо")
+        .reg-buttons__button
+          +button("form", "Юридическое лицо")
+      .login Уже есть аккаунт?
+        a(href="#")
+          b Войти 
+    .bg
+      img(src="/assets/img/bgwave.svg", alt="").bg__wave
+      img(src="/assets/img/bgpeople.svg", alt="").bg__people

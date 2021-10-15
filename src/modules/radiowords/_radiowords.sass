@@ -1,0 +1,15 @@
+.radiowords
+
+  &__input
+    appearance: none
+    outline: none
+    &:checked + .radiowords__label
+      @extend %selected
+  
+  &__label
+    @extend %center-column
+    width: 115px
+    padding: 11px 0
+    @extend %deselected
+    border-radius: 12px
+    cursor: pointer

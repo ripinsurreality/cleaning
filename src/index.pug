@@ -1,0 +1,33 @@
+doctype html
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(http-equiv="X-UA-Compatible" content="IE=edge")
+        meta(name="viewport" content="width=device-width, initial-scale=1.0")
+        title Твоя Уборка
+        include /modules/button/button
+        include /modules/togglebox/togglebox
+        include /modules/radionum/radionum
+        include /modules/toggleyesno/toggleyesno
+        include /modules/radiowords/radiowords
+        include /modules/rate/rate
+        include /modules/input/input
+        include /modules/hr/hr
+    body 
+        +button("form", "Продолжить")
+        +button("plus")
+        +button("black", "Сохранить")
+        +button("add", "Добавить адрес")
+        +button("pay", "Перейти к оплате")
+        +button("pay", "Перейти к оплате")(disabled="true")
+        +hr
+        +togglebox
+        +radionum(10, "list")
+        +radionum(5, "list2")
+        +toggleyesno()
+        +radiowords("test", "Юридическое лицо", "Физическое лицо")
+        +input("Test")
+        +input("Test", "large")
+        +input("Test", "square")
+        +input("Test", "shade")
+        //- +rate("rate")

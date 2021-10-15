@@ -1,0 +1,22 @@
+.radionum
+  display: flex
+  font-weight: 300
+  &__input
+    @extend %center-column
+    appearance: none
+    outline: none
+    &:checked + .radionum__label
+      background: $main
+      @extend %selected
+      box-shadow: $shadow-inset
+
+  &__label
+    width: 35px
+    height: 35px
+    @extend %center-column
+    border-radius: 50%
+    cursor: pointer
+    @extend %deselected
+  
+  & > * + *
+    margin-left: 5px
