@@ -6,14 +6,10 @@ html(lang="en")
     meta(name="viewport" content="width=device-width, initial-scale=1.0")
     title Greeting
     include /modules/button/button
+    include /modules/form-head/form-head
   body 
     .container
-      .head
-        .location
-          include /assets/img/loc.svg 
-          span Москва
-        .logo
-          include /assets/img/logo.svg
+      +form-head
       .tagline 
         include /assets/img/tagline.svg
       .reg-buttons 
