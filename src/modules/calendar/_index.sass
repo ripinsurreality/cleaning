@@ -1,0 +1,70 @@
+.calendar
+  border: 1px solid $main
+  background: #fff
+  border-radius: 14px
+  padding: 14px 21px
+  width: 240px
+  font-size: 12px
+  font-weight: 300
+  user-select: none
+
+  &__nav
+    display: flex
+    justify-content: space-between
+    align-items: center
+
+  &__arrow
+    @extend %center-column
+    width: 10px
+    height: 10px
+
+  &__arrow-left,
+  &__arrow-right
+    width: 7px
+    height: 7px
+    border-radius: 1px
+  
+  &__arrow-left
+    border-left: 1px solid #000
+    border-bottom: 1px solid #000
+    transform: rotate(45deg)
+
+  &__arrow-right
+    border-right: 1px solid #000
+    border-bottom: 1px solid #000
+    transform: rotate(-45deg)
+
+  &__weekdays,
+  &__dates
+    display: grid
+    grid-template-columns: repeat(7, 1fr)
+    gap: 5px
+
+  &__nav
+    margin-bottom: 11px
+
+  &__weekday,
+  &__date
+    @extend .flex
+    @extend .center
+    width: 24px
+    height: 24px
+    border-radius: 14px
+
+  &__weekday
+    font-weight: 300
+    font-size: 8px
+
+  &__date
+    box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1), -1px -1px 4px rgba(255, 255, 255, 0.15)
+
+    &--selected
+      box-shadow: none
+      font-weight: 500
+      background: $main
+      color: #fff
+    &--holiday
+      border: 1px solid $main
+    
+    &--disabled
+      color: #bdbdbd

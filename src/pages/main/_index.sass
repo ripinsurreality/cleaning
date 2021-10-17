@@ -1,9 +1,7 @@
 .container
   width: 250px
   margin: auto
-
-.tagline
-  margin: 40px 0 35px
+  position: relative
 
 .reg-buttons
   display: flex
@@ -24,11 +22,8 @@
 .bg
   width: 320px
   margin: auto
-  position: relative
-
-  &__wave,
-  &__people
-    position: absolute
-  
-  &__wave
-    top: 33px
+  position: absolute
+  bottom: 0
+  left: 50%
+  transform: translateX(-50%)
+  z-index: -1

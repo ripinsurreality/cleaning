@@ -1,0 +1,28 @@
+mixin calendar()
+  .calendar
+    .calendar__nav 
+      .calendar__arrow
+        .calendar__arrow-left 
+      .calendar__month Ябрь
+      .calendar__arrow
+        .calendar__arrow-right
+    .calendar__main 
+      .calendar__weekdays 
+        .calendar__weekday Пн
+        .calendar__weekday Пн
+        .calendar__weekday Пн
+        .calendar__weekday Пн
+        .calendar__weekday Пн
+        .calendar__weekday Пн
+        .calendar__weekday Пн
+      .calendar__dates
+        - var n = 1;
+        while n < 36
+          if n == 17
+            .calendar__date.calendar__date--selected= n++
+          else if n > 31
+            .calendar__date.calendar__date--disabled= (n++)-31
+          else if (n % 7 == 0) || (n + 1) % 7 == 0
+            .calendar__date.calendar__date--holiday= n++
+          else
+            .calendar__date= n++

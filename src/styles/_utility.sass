@@ -1,0 +1,30 @@
+/** 
+  Margin and padding utility classes
+  Utility class, add !important
+ **/
+
+// Define increments (pixels) and directions needed.
+$increments: (5, 8, 10, 15, 20, 25, 30, 35, 40, 45, 50, 55, 60)
+$directions: (top, bottom, left, right)
+
+// Loop through the increments and directions.
+@each $increment in $increments
+  @each $direction in $directions
+    .m#{str-slice($direction, 0, 1)}-#{$increment}
+      margin-#{$direction}: #{$increment}px !important
+
+    .p#{str-slice($direction, 0, 1)}-#{$increment}
+      padding-#{$direction}: #{$increment}px !important
+
+.flex
+  display: flex
+
+.column
+  flex-direction: column
+
+.row
+  flex-direction: row
+
+.center
+  justify-content: center
+  align-items: center

@@ -23,9 +23,9 @@ const optimization = () => {
       chunks: "all",
     },
   }
-  if (isProd) {
-    config.minimizer = [new CssMinimizerPlugin(), new TerserPlugin()]
-  }
+  // if (isProd) {
+  //   config.minimizer = [new CssMinimizerPlugin(), new TerserPlugin()]
+  // }
   return config
 }
 
@@ -92,7 +92,7 @@ const config = {
       ],
     }),
     new HtmlWebpackPlugin({
-      template: `${PAGES_DIR}/pages/main/main.pug`,
+      template: `${PAGES_DIR}/index.pug`,
       filename: `index.html`,
       favicon: `${PAGES_DIR}/assets/img/favicon.svg`
       // chunks: [`${page}`],

@@ -10,16 +10,15 @@ html(lang="en")
   body 
     .container
       +form-head
-      .tagline 
+      .mt-40.mb-35
         include /assets/img/tagline.svg
-      .reg-buttons 
-        .reg-buttons__button
+      .mt-35.mb-20
+        .flex.center.mb-10
           +button("form", "Физическое лицо")
-        .reg-buttons__button
+        .flex.center
           +button("form", "Юридическое лицо")
       .login Уже есть аккаунт?
         a(href="#")
           b Войти 
     .bg
-      img(src="/assets/img/bgwave.svg", alt="").bg__wave
-      img(src="/assets/img/bgpeople.svg", alt="").bg__people
+      include /assets/img/bgwelcome.svg
